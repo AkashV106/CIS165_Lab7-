@@ -1,21 +1,17 @@
 # CIS165_Lab7- Min and Max
 
 ## Initial Plan
-[REWRITE IN YOUR OWN WORDS. Draft based on my code:]
 - Input: integers typed by the user, ended by the sentinel -99 (`SENTINEL`).
 - Variables: `number` (current input), `largest`, `smallest`, `count` (how many real values were entered), and an array `values` of size `MAX_ENTRIES` to hold them.
 - Steps: read the first number. If it is -99, print "No data values were entered." Otherwise set `largest` and `smallest` to that first number. Then loop while the number is not -99 and the array is not full: store the number, compare it to `largest` and `smallest`, and read the next number.
 - Checks: -99 is tested before anything is stored or compared. The loop also stops if the array fills up.
 - Output: the values entered, then the largest and smallest with labels, or the no-data message.
 
-[KEEP ONLY IF TRUE: I wrote a first version of the code before writing this plan, then revised it.]
-
 ## Compile and Run
 ```
 g++ -std=c++17 -Wall -Wextra min_max.cpp -o min_max
 ./min_max
 ```
-[OR: describe how you ran it in OnlineGDB with C++17 selected.]
 
 ## Test Records
 | # | Input | Expected | Actual output | Match? |
@@ -29,9 +25,9 @@ g++ -std=c++17 -Wall -Wextra min_max.cpp -o min_max
 
 **Test 6 checks:** that a real 0 can be the largest value when every other entry is negative. It would fail if `largest` started at 0 and was never taken from the data.
 
-**Errors fixed:** [Describe any bug you hit and the rerun. If you ran my corrected version only, write "None." If you ran your original first, you may have seen `-99` at the end of the values list, a `Largest A` typo, and a placeholder no-data message, which I fixed by only storing real values and correcting the labels.]
+**Errors fixed:** When I ran the code It was printing a non-included 0. It was because I was making the count 2 from 0 instead of 1 I changed the count++ and then it didn't print any non-included value
 
-**Final check:** [Keep only if true: I recompiled and reran the final source before the final commit. I made no temporary test changes / I restored ___.]
+**Final check:**I recompiled and reran the final source before the final commit. I made no temporary test changes / I restored
 
 ## Explanation of My Code
 
