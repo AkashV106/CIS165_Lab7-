@@ -1,0 +1,9 @@
+# AI Reflection
+
+**Tools:** I used Claude to review my draft of min_max.cpp and to help organize the README. I wrote the first version of the code myself.
+
+**One decision:** My draft stored every input in an array, including the sentinel. Claude first suggested removing the array because the lab doesn't require one. I wanted to keep it, so I kept it. Claude agreed that was fine, but pointed out that my array held -99, so my printed list ended with `-99` even though the sentinel is supposed to be excluded. I accepted that fix and now only store real values. I also kept a `MAX_ENTRIES` check so the array can't overflow. I accepted Claude's other fixes too: initializing `largest` and `smallest`, correcting the `SENTINEL` spelling, fixing the `Largest A` output typo, and replacing the placeholder no-data message.
+
+**A specific check:** I ran the series -3, 0, -7, -99. Before running, I predicted smallest -7 and largest 0. The program printed: smallest -7 and largest 0. This showed that a real zero can be the largest value when the other entries are negative, so the extrema come from the data and not from a starting value of 0.
+
+**Learning:** I can now declare and use an array to store a series of values, and use a `const int` for fixed values like the sentinel (`SENTINEL = -99`) and the array size (`MAX_ENTRIES`) instead of typing the numbers directly in the code. I still need to practice [PICK ONE THAT'S TRUE FOR YOU: tracing loops by hand to predict output / keeping the array from overflowing / writing the loop without help].
